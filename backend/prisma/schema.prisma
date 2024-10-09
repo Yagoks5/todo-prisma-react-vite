@@ -9,6 +9,13 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+// Modelo para criar as tarefas
+model Task {
+  id        Int      @id @default(autoincrement()) // o id da tarefa será chave primaria com autoincremento
+  title     String                                 // texto da tarefa (colocar obrigatório?)
+  completed Boolean  @default(false)                // se a tarefa está concluida (começar com false)
 }
