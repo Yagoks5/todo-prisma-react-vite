@@ -16,6 +16,7 @@ export default function Header({ onAddTask, newTask, setNewTask, error }) {
     <header className={styles.header}>
       <form onSubmit={handleSubmit} className={styles.newTaskForm}>
         <button type="submit">+</button>
+        {/* Tentar colocar o + dentro do placeholder. */}
         <input
           placeholder="Adicione uma nova tarefa"
           type="text"
