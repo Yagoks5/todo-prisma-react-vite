@@ -45,7 +45,7 @@ Descrição breve do projeto e suas funcionalidades.
 4. Inicie o servidor
    ```
    na pasta backend:
-   npm star
+   npm start
 
 5. Para rodar a aplicação
    ```
