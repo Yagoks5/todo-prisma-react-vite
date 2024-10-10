@@ -1,3 +1,7 @@
 export default function Profissional() {
-  return <>Olaaa sou profissional</>;
+  return (
+    <>
+      <h1>Olaaa sou profissional</h1>
+    </>
+  );
 }

@@ -1,3 +1,7 @@
 export default function Pessoal() {
-  return <>Oláaa pai. Sou pessoaaal</>;
+  return (
+    <>
+      <h1>Oláaa pai. Sou pessoaaal;</h1>
+    </>
+  );
 }
