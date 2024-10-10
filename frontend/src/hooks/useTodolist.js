@@ -7,7 +7,7 @@ import {
 } from "../services/taskServices.jsx";
 
 // Mostrar as tarefas
-export const useTodoList = (collectionId) => {
+export const useTodolist = (collectionId) => {
   const [tasks, setTasks] = useState([]);
   const [completedTasks, setCompletedTasks] = useState([]); // Novo estado para tarefas concluídas
 

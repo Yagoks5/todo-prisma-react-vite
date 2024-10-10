@@ -7,7 +7,7 @@ import {
   TaskText,
   InputWrapper,
 } from "./TodolistStyled";
-import { useTodoList } from "../../hooks/useTodoList";
+import { useTodolist } from "../../hooks/useTodolist";
 import { FaRegTrashAlt } from "react-icons/fa"; // Importando o ícone da lixeira
 
 // eslint-disable-next-line react/prop-types
@@ -20,7 +20,7 @@ const TodoList = ({ collectionId }) => {
     handleCreateTask,
     handleDeleteTask,
     handleCompleteTask,
-  } = useTodoList(collectionId);
+  } = useTodolist(collectionId);
 
   return (
     <Container>
