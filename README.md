@@ -44,10 +44,12 @@ Descrição breve do projeto e suas funcionalidades.
 
 4. Inicie o servidor
    ```
-   node server.js
+   na pasta backend:
+   npm star
 
-5. Para rodar os testes
+5. Para rodar a aplicação
    ```
-   npm test
+   na pasta frontend:
+   npm run dev
 
 
