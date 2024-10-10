@@ -1,41 +1,31 @@
 import styled from "styled-components";
-// Estilizando o container principal
+
 export const Container = styled.div`
+  width: 100%;
+  max-width: 500px;
+  margin: 50 auto;
   padding: 20px;
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: #f9f9f9;
+  background-color: #191919;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 `;
 
-// Estilizando o título
-export const Title = styled.h2`
-  text-align: center;
-  color: #333;
-`;
-
-// Estilizando o campo de entrada
 export const Input = styled.input`
-  width: calc(100% - 120px);
+  width: 100%;
   padding: 10px;
+  border-radius: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-right: 10px;
-
-  &:focus {
-    border-color: #007bff;
-    outline: none;
-  }
+  margin-left: 10px;
+  font-size: 16px;
+  background-color: #333;
+  color: #ffffff;
 `;
 
-// Estilizando o botão
 export const Button = styled.button`
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #ff0084;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
 
   &:hover {
@@ -43,28 +33,30 @@ export const Button = styled.button`
   }
 `;
 
-// Estilizando a lista de tarefas
 export const TaskList = styled.ul`
   list-style: none;
   padding: 0;
-  margin: 20px 0;
 `;
 
-// Estilizando os itens da tarefa
 export const TaskItem = styled.li`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #333;
   padding: 10px;
-  border-bottom: 1px solid #ccc;
-
-  &:last-child {
-    border-bottom: none;
-  }
+  margin-bottom: 10px;
+  border-radius: 8px;
 `;
 
-// Estilizando o texto da tarefa
 export const TaskText = styled.span`
-  text-decoration: ${(props) => (props.completed ? "line-through" : "none")};
-  color: ${(props) => (props.completed ? "#aaa" : "#333")};
+  flex-grow: 1;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+`;
+
+export const InputWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 `;

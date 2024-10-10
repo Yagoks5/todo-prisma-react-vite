@@ -1,12 +1,13 @@
-// src/components/TodoList/TodoList.jsx
+import { FaRegTrashAlt } from "react-icons/fa";
+
 import {
   Container,
-  Title,
   Input,
   Button,
   TaskList,
   TaskItem,
   TaskText,
+  InputWrapper,
 } from "./TodolistStyled";
 import { useTodoList } from "../../hooks/useTodoList";
 
@@ -17,22 +18,23 @@ const TodoList = ({ collectionId }) => {
 
   return (
     <Container>
-      <Title>To-Do List</Title>
-      <div>
+      <InputWrapper>
+        <Button onClick={handleCreateTask}>+</Button>
         <Input
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Nova tarefa"
         />
-        <Button onClick={handleCreateTask}>Adicionar</Button>
-      </div>
+      </InputWrapper>
 
       <TaskList>
         {tasks.map((task) => (
           <TaskItem key={task.id}>
             <TaskText completed={task.completed}>{task.title}</TaskText>
-            <Button onClick={() => handleDeleteTask(task.id)}>Deletar</Button>
+            <Button onClick={() => handleDeleteTask(task.id)} transparent>
+              <FaRegTrashAlt />
+            </Button>
           </TaskItem>
         ))}
       </TaskList>
