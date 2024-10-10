@@ -7,9 +7,18 @@ datasource db {
   url      = "file:./dev.db"
 }
 
-// Modelo para criar as tarefas
+// Collections para as tasks (armazenar elas )
+model Collection {
+  id    Int    @id @default(autoincrement())  // id da categoria com autoincremento
+  name  String                               // nome da categoria (ex: Pessoal, Profissional)
+  tasks Task[]                               // relacionamento com várias tarefas
+}
+
+// Base para as tarefas
 model Task {
-  id        Int      @id @default(autoincrement()) // o id da tarefa será chave primaria com autoincremento
-  title     String                                 // texto da tarefa (colocar obrigatório?)
-  completed Boolean  @default(false)                // se a tarefa está concluida (começar com false)
+  id           Int        @id @default(autoincrement()) // id da tarefa com autoincremento
+  title        String                                    // título/ou a tarefa em sim
+  completed    Boolean    @default(false)                // status (falso de começo)
+  collectionId Int                                        // chave estrangeira para a Collection
+  collection   Collection @relation(fields: [collectionId], references: [id]) // relacionamento com Collection
 }
