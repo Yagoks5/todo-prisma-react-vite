@@ -1,7 +1,17 @@
-export default function Pessoal() {
+import Todolist from "../components/todolist/Todolist";
+
+function Pessoal() {
   return (
-    <>
-      <h1>Oláaa pai. Sou pessoaaal;</h1>
-    </>
+    <div>
+      <h1>Tarefas Pessoais</h1>
+      <ul>
+        <li>
+          <Todolist collectionId={1} />{" "}
+          {/* Passando a collectionId para Pessoal */}
+        </li>
+      </ul>
+    </div>
   );
 }
+
+export default Pessoal;

@@ -11,6 +11,11 @@ body {
   min-height: 100vh;
 }
 
-button {
-  cursor: pointer;
+.pages {
+  flex: 1;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
