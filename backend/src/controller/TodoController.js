@@ -60,4 +60,32 @@ const deleteTask = async (req, res) => {
   }
 };
 
-module.exports = { showAllTasks, createTask, updateTask, deleteTask }; // Exportar as  as funções!!!!!
+// Funcão para criar a collection.
+const createCollection = async (req, res) => {
+  const { name } = req.body;
+
+  if (!name) {
+    return res.status(400).json({ error: "O nome da coleção é necessário" });
+  }
+
+  try {
+    const collection = await prisma.collection.create({
+      data: { name },
+    });
+    return res.status(201).json(collection); // Retorna a coleção criada
+  } catch (error) {
+    return res.status(500).json({ error: "Erro ao criar coleção" });
+  }
+};
+
+// Função para mostrar todas as collections
+const showAllCollections = async (req, res) => {
+  try {
+    const collections = await prisma.collection.findMany(); // Busca todas as collections
+    res.json(collections); // Retorna as collections encontradas
+  } catch (error) {
+    res.status(500).json({ error: "Erro ao buscar as collections" }); // Retorna um erro em caso de falha
+  }
+};
+
+module.exports = { showAllTasks, createTask, updateTask, deleteTask, createCollection, showAllCollections }; // Exportar as  as funções!!!!!
