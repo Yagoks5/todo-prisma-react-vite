@@ -11,10 +11,10 @@ const {
 
 const router = express.Router();
 
-// Rotas para a API
+// Rotas para a API - Tarefas
 router.get("/tasks", showAllTasks); // Mostrar todas as tarefas
 router.post("/tasks", createTask); // Criar uma tarefa
-router.put("/tasks/:id", updateTask); // Atualizar tarefa
+router.patch("/tasks/:id", updateTask); // Atualizar tarefa - deletar isso!
 router.delete("/task/:id", deleteTask); // Deletar tarefa
 
 // Rotas para Collections
