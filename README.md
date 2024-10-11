@@ -39,8 +39,8 @@ Descrição breve do projeto e suas funcionalidades.
 
 3. Configuração do Prisma
    ```
-   npx prisma migrate dev
    execute o seguinte comando para criar o banco de dados e as tabelas necessárias:
+   npx prisma migrate dev
 
 4. Inicie o servidor
    ```
